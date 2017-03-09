@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		html, body {
+			height: 100%;
+			width: 100%;
+		}
+
+		.wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+
+		.wrapper2 {
+			width: 60vmin;
+			height: 100%;
+
+		}
+
+		.rectangle {
+			width: 40vmin;
+			height: 25vmin;
+		}
+
+		.blue {
+			background-color: #3162af;
+			opacity: 0.87;
+			position: absolute;
+			top: 5%;
+			z-index: 0;
+		}
+
+		.green {
+			background-color: #00a063;
+			opacity: 0.85;
+			position: absolute;
+			z-index: 10;
+			top: 12%;
+			left: 40%;
+		}
+
+		.second {
+			top: 45%;
+		}
+
+		.third {
+			top: 85%;
+		}
+
+		.two {
+			top: 52%;
+		}
+
+		.three {
+			top: 92%;
+		}
+
+
+
+		@keyframes bluemove {
+
+			25% {
+				transform: translate(50%, 5%) skewX(10deg) scaleX(0.25);
+/*				transform: skewX(10deg);*/
+			}
+
+			50% {
+				transform: translate(50%, 40%);
+			}
+
+			75% {
+				transform: translate(0%, 40%) skewX(-10deg) scaleX(0.25);
+/*				transform: scale(0.5,0.5);*/
+			}
+
+			100% {
+				transform: initial;
+			}
+		}
+
+		.blueanimate {
+			animation: bluemove 3s infinite ease-in-out;
+		}
+
+		@keyframes greenmove {
+
+			25% {
+				transform: translate(-50%, 0%) skewX(-10deg) scaleX(0.25);
+/*				transform: scale(0.5,0.5);*/
+			}
+
+			50% {
+				transform: translate(-50%,-35%);
+			}
+
+			75% {
+				transform: translate(0%, -35%) skewX(10deg) scaleX(0.25);
+/*				transform: scale(0.5,0.5);*/
+			}
+
+			100% {
+				transform: initial;
+			}
+		}
+
+		.greenanimate {
+			animation: greenmove 3s infinite ease-in-out;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+	<div class="wrapper2">
+	<div class="blue rectangle blueanimate"></div><div class="green rectangle greenanimate"></div>
+	<div class="second blue rectangle blueanimate"></div><div class="two green rectangle greenanimate"></div>
+	<div class="third blue rectangle blueanimate"></div><div class="three green rectangle greenanimate"></div>
+	</div>
+	</div>
+</body>
+</html>
